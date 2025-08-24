@@ -124,7 +124,7 @@ html body .__USER__ .v2-open #sidebar-v2,
 
 /* Sidebar link hover state */
 .__USER__ #sidebar-v2 nav a:hover {
-	background:  var(--menu-active-color) !important;
+	background:  var(--menu-hover-color) !important;
 	border-width: 0px !important;
 }
 
