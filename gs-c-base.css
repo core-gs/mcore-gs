@@ -37,9 +37,10 @@
 
 	--tb-i-bg-dialer: #00B359;
 	--tb-i-bg-askai: #0D6AFF;
-	--tb-i-bg-activity: #08AF90;
-	--tb-i-bg-help: #FF7937;
-	--tb-i-bg-cannylogs: #24A0FF;
+	--tb-i-bg-cannylogs: #08AF90;
+	--tb-i-bg-activity: #FF7937;
+	--tb-i-bg-help: #24A0FF;
+	
 }
 
 /* ================= GLOBAL FONT SETTING ================ */
