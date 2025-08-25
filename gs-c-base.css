@@ -34,6 +34,12 @@
 	--top-nav-title-font-size: 24px;
 	--top-nav-bg-color: #165ef000;
 	--top-nav-bg-gradient: linear-gradient(250deg, #00000000 88%, #00000000 100%);
+
+	--tb-i-bg-dialer: #00B359;
+	--tb-i-bg-askai: #00B359;
+	--tb-i-bg-activity: #00B359;
+	--tb-i-bg-help: #00B359;
+	--tb-i-bg-cannylogs: #00B359;
 }
 
 /* ================= GLOBAL FONT SETTING ================ */
@@ -112,7 +118,10 @@ html body .__USER__ .v2-open #sidebar-v2,
 }
 
 .__USER__.sidebar-v2-location #sidebar-v2 .hl_nav-header-without-footer > nav .default-bg-color {
-    background: var(--ghl-sidebar-color) !important;
+	color: color-mix(in srgb, var(--menu-text-color), transparent 0%) !important;
+    background: var(--menu-hover-color) !important;
+	padding-left: 3px !important;
+	padding-right: 3px !important;
 }
 
 /* ================= SIDEBAR LINK STATES ================ */
@@ -645,6 +654,13 @@ html body .__USER__ .v2-open #sidebar-v2,
 
 /* Power Dialer Icon */
 
+.__USER__ #template-power-dialer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tb-i-bg-dialer);
+}
+
 .__USER__ #template-power-dialer button > svg{
  Display:none !important;
 }
@@ -660,58 +676,124 @@ html body .__USER__ .v2-open #sidebar-v2,
 	vertical-align: middle;
 }
 
+/* Copilot Icon */
+
+.__USER__ #hl_header--copilot-icon.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.__USER__ #hl_header--copilot-icon.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--tb-i-bg-askai);
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.__USER__ #hl_header--copilot-icon.btn > svg {
+  display: none !important;
+}
+
+
+.__USER__ #hl_header--copilot-icon.btn::before {
+  content: "" !important;
+  background-image: var(--icon-askai);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
 
 /* Notification Icon */
+
+.__USER__ #recent_activities-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tb-i-bg-activity);
+}
 
 .__USER__ #recent_activities-toggle i {
   display: none !important;
 }
 
 .__USER__ #recent_activities-toggle::before {
-	content: '' !important;
-	background-image: var(--icon-activitie);
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	vertical-align: middle;
+  content: '' !important;
+  background-image: var(--icon-activitie);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 
 /* Help Icon */
+
+.__USER__ #hl_header--help-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.__USER__ #hl_header--help-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--tb-i-bg-help);
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+
 
 .__USER__ #hl_header--help-icon i {
   display: none !important;
 }
 
 .__USER__ #hl_header--help-icon::before {
-	content: '' !important;
-	background-image: var(--icon-help);
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	vertical-align: middle;
+  content: "" !important;
+  background-image: var(--icon-help);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
 
 
 /* Canny Icon */
+
+.__USER__ #canny_logs-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tb-i-bg-cannylogs);
+}
 
 .__USER__ #canny_logs-toggle i {
   display: none !important;
 }
 
 .__USER__ #canny_logs-toggle::before {
-	content: '' !important;
-	background-image: var(--icon-canny-logs);
-	display: inline-block;
-	width: 18px;
-	height: 18px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	vertical-align: middle;
+  content: '' !important;
+  background-image: var(--icon-canny-logs);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* ================= CARD STYLES ================ */
